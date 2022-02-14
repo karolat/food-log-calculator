@@ -1,2 +1,0 @@
-# food-log-calculator
- 
