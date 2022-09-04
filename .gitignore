@@ -114,4 +114,4 @@ dmypy.json
 .pyre/
 
 #Leave out txt files
-.txt
+*.txt
