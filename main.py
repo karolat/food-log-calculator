@@ -7,17 +7,13 @@ def main():
     with open(sys.argv[1], 'r') as f:
         data = f.readlines()
 
-    f.close()
-
     #create a new list to store lines that are food items. lines with only number were my own calorie counts
     new_list = []
-
 
     #only append lines that end with a number and have more than one part
     for line in data:
         if (len(line.split()) > 1 and any(ch.isdigit() for ch in line.split()[-1])):
             new_list.append(line.replace('\n', ''))
-
 
     #calculate the amount of protein
     protein = 0
