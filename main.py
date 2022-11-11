@@ -1,10 +1,8 @@
-from hashlib import new
-from posixpath import split
 import sys
 
 def main():
     #read all the lines from the file and close it
-    with open(sys.argv[1], 'r') as f:
+    with open(sys.argv[1], mode='r', encoding='UTF-8') as f:
         data = f.readlines()
 
     #create a new list to store lines that are food items. lines with only number were my own calorie counts
@@ -44,7 +42,7 @@ def main():
 
     if (not calories_present):
         print('writing calories')
-        with open (sys.argv[1], 'a') as f:
+        with open(sys.argv[1], mode='a', encoding='UTF-8') as f:
             f.write(f'\n{calorie_total}')
             f.close()
 
